@@ -4,9 +4,16 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
 body {
     padding-top: 120px;
-    font-family: 'Pretendard', sans-serif
+    font-family: 'Pretendard', sans-serif;
+    font-size: 14px;
 }
 
 .nav {
@@ -15,7 +22,7 @@ body {
     left: 0;
     right: 0;
 
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
 
     padding: 14px 40px;
@@ -51,7 +58,7 @@ body {
 }
 
 .profile {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 50px auto;
     padding-left: 40px;
     padding-right: 40px;
@@ -73,7 +80,7 @@ body {
 }
 
 .project {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 50px auto;
     padding-left: 40px;
     padding-right: 40px;
