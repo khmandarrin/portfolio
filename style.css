@@ -1,150 +1,201 @@
+/* =========================
+   기본 초기화 스타일
+   ========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* =========================
+   공통 레이아웃
+   페이지 최대 폭 및 좌우 여백
+   ========================= */
 .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
+/* =========================
+   전체 문서 기본 스타일
+   ========================= */
 body {
-    padding-top: 120px;
-    font-family: 'Pretendard', sans-serif;
-    font-size: 14px;
+  padding-top: 120px; /* 고정 네비게이션 영역만큼 여백 확보 */
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
 }
 
+/* =========================
+   상단 네비게이션 바
+   ========================= */
 .nav {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
 
-    /*max-width: 1200px;*/
-    margin: 0 auto;
+  margin: 0 auto;
+  padding: 14px 40px;
+  border-radius: 60px;
 
-    padding: 14px 40px;
-    border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    /* background-color: white; */
-    backdrop-filter: blur(8px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
+/* 네비게이션 로고 텍스트 */
 .logo {
-    color:black;
-    font-size: 20px;
-    font-weight: bold;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
 }
 
+/* 네비게이션 메뉴 리스트 */
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin-right: 100px;
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin-right: 10px;
 }
 
+/* 네비게이션 메뉴 아이템 */
 .menu li {
-    padding: 8px 18px;
-    color: black;
-    
+  padding: 8px 18px;
+  color: black;
 }
 
+/* =========================
+   프로필 섹션
+   ========================= */
 .profile {
-    /*max-width: 1200px;*/
-    margin: 50px auto;
-    padding-left: 40px;
-    padding-right: 40px;
+  margin: 50px auto;
+  padding-left: 40px;
+  padding-right: 40px;
 
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
+/* 프로필 텍스트 영역 */
 .profile-text {
-    flex: 1;
+  flex: 1;
 }
 
+/* 프로필 이미지 */
 .profile-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 20px;
-    object-fit: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-.project {
-    /*max-width: 1200px;*/
-    margin: 50px auto;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-
-    text-align: center;
+/* =========================
+   스킬 / 태그 공통 스타일
+   ========================= */
+.skill-box {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-top: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.project-card {
-    width: 320px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    background: white;
+/* 연락처 태그 영역 */
+.contact-tags {
+  display: flex;
+  gap: 10px;
 }
 
-.project-card .project-image {
-    flex: 2;
+/* 개별 태그 스타일 */
+.contact-tags .tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.045);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.project-card .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-}
-
-.project-card .project-text {
-    flex: 1;
-    padding: 16px;
-    text-align: center;
-}
-
-/*
-.project-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.project-text {
-    flex:1;
-    text-align: center;
-}
-
-.project-image img {
-    width: 500px;
-    height: 250px;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: top;
-}
-*/
-
+/* =========================
+   섹션 구분선
+   ========================= */
 .section-divider {
-    border: none;
-    height: 2px;
-    background-color: rgba(0,0,0,0.1);
-    margin: 10px 0;
+  border: none;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+/* =========================
+   프로젝트 섹션
+   ========================= */
+.project {
+  margin: 50px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  text-align: center;
+}
+
+/* 프로젝트 카드 그리드 레이아웃 */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 한 줄에 카드 2개 */
+  gap: 40px;
+}
+
+/* 개별 프로젝트 카드 */
+.project-card {
+  width: 100%;
+  height: 450px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+/* 프로젝트 이미지 영역 */
+.project-card .project-image {
+  width: 100%;
+  height: 300px; /* 이미지 영역 높이 고정 */
+  overflow: hidden;
+}
+
+/* 프로젝트 이미지 */
+.project-card .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* 프로젝트 텍스트 영역 */
+.project-card .project-text {
+  margin-top: auto; /* 이미지 높이가 달라도 하단 정렬 */
+  padding: 16px;
+  text-align: center;
+}
+
+/* 프로젝트 기간 텍스트 */
+.project-period {
+  display: block;
+  margin-top: 4px;
+  color: rgba(0, 0, 0, 0.459);
+  font-size: 14px;
 }
