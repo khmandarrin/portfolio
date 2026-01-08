@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Pretendard 웹폰트 로드 -->
     <link
-      rel="stylesheet"
+      rel="preload"
       as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      />
+    </noscript>
   </head>
 
   <!-- 상단 네비게이션 영역 -->
